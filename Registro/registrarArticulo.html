@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Artículo</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Registrar Artículo</h1>
+        <form id="registrarForm" class="mt-4">
+            <div class="form-group">
+                <label for="nombre">Nombre del Artículo:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea class="form-control" id="descripcion" name="descripcion" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input type="number" class="form-control" id="precio" name="precio" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" class="form-control" id="cantidad" name="cantidad" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="registrarArticulo()">Registrar</button>
+        </form>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
