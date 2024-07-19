@@ -31,7 +31,7 @@
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 10px; /* Espaciado entre elementos */
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
     transition: background-color 0.3s ease;
 }
 
@@ -72,3 +72,43 @@
     border-color: #dee2e6 #dee2e6 #f8f9fa;
     background-color: #f8f9fa;
 }
+
+.btn-success, .btn-danger, .btn-outline-primary {
+    margin-right: 10px;
+}
+.order-card {
+    border: 1px solid #FFCC99;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: #FFF8E1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.2s;
+}
+.order-card:hover {
+    transform: scale(1.02);
+}
+.order-card p {
+    margin: 0;
+}
+.order-card .btn {
+    margin: 5px 0;
+}
+.btn-accept {
+    background-color: #E0F7FA;
+    border: 1px solid #00ACC1;
+    color: #00ACC1;
+}
+.btn-reject {
+    background-color: #FFEBEE;
+    border: 1px solid #D32F2F;
+    color: #D32F2F;
+}
+.btn-primary {
+    background-color: #B2EBF2;
+    border: 1px solid #00ACC1;
+    color: #00ACC1;
+}
+
+
+

@@ -9,23 +9,19 @@
 </head>
 <body>
     <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="img/logo.png" alt="Manos Mexicanas" style="height: 50px;">
+        <a class="navbar-brand d-flex align-items-center" href="indexAdmin.html">
+            <img src="img/logo_Manos_Mexicanas-removebg-preview.png" alt="Manos Mexicanas" style="height: 50px;">
             <span class="ml-2">Manos Mexicanas</span>
         </a>
     </nav>
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <a href="adminIndex.html" class="btn btn-link">
-                <img src="img/back-arrow.png" alt="Regresar" style="height: 20px;">
-                Regresar
-            </a>
-            <h2 class="text-center flex-grow-1">Gestionar pedidos</h2>
+            <h2 class="text-center flex-grow-1">Gestionar Pedidos</h2>
             <div class="input-group" style="max-width: 300px;">
-                <input type="text" class="form-control" placeholder="Buscar pedido">
+                <input type="text" class="form-control" placeholder="Buscar usuario">
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="button">
-                        <img src="img/search-icon.png" alt="Buscar" style="height: 20px;">
+                        <img src="img/search.png" alt="Buscar" style="height: 20px;">
                     </button>
                 </div>
             </div>
@@ -48,11 +44,77 @@
                         <div class="list-group">
                             <div class="list-group-item d-flex justify-content-between align-items-center shadow-inner order-card">
                                 <div>
-                                    <p><strong>Pedido:</strong> Pedido 1</p>
-                                    <p><strong>Descripción:</strong> Descripción del pedido 1</p>
+                                    <p><strong>Pedido:</strong> Solicitud de Pedido</p>
+                                    <p><strong>Tiempo estimado:</strong> 2 min</p>
+                                    <p><strong>Estatus del producto:</strong> En espera</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-success btn-sm mr-2">Aceptar</button>
+                                    <button class="btn btn-danger btn-sm">Rechazar</button>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center shadow-inner order-card">
+                                <div>
+                                    <p><strong>Pedido:</strong> Solicitud de Pedido</p>
                                     <p><strong>Tiempo estimado:</strong> 15 min</p>
+                                    <p><strong>Estatus del producto:</strong> Aprobado</p>
                                 </div>
                                 <div>
+                                    <a href="infoPedido.html" class="btn btn-outline-primary">Ver Pedido</a>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center shadow-inner order-card">
+                                <div>
+                                    <p><strong>Pedido:</strong> Solicitud de Pedido</p>
+                                    <p><strong>Tiempo estimado:</strong> 10 min</p>
+                                    <p><strong>Estatus del producto:</strong> Rechazado</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-outline-primary btn-sm" disabled>Solicite otro Pedido en otro momento</button>
+                                </div>
+                            </div>
+                            <!-- Agrega más pedidos aquí -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade show active" id="orders-in-progress" role="tabpanel" aria-labelledby="orders-in-progress-tab">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="list-group">
+                            <div class="list-group-item d-flex justify-content-between align-items-center shadow-inner order-card">
+                                <div>
+                                    <p><strong>Pedido:</strong> Pedido pagado</p>
+                                    <p><strong>Descripción:</strong> Descripción del pedido</p>
+                                    <p><strong>Tiempo estimado:</strong> 15 min</p>
+                                    <p><strong>Estatus del producto:</strong> En espera</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-accept">Marcar como pagado</button>
+                                    <button class="btn btn-outline-primary">Ver Pedido</button>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center shadow-inner order-card">
+                                <div>
+                                    <p><strong>Pedido:</strong> Pedido enviado</p>
+                                    <p><strong>Descripción:</strong> Descripción del pedido</p>
+                                    <p><strong>Tiempo estimado:</strong> 15 min</p>
+                                    <p><strong>Estatus del producto:</strong> Enviado</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-accept">Marcar como enviado</button>
+                                    <button class="btn btn-outline-primary">Ver Pedido</button>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center shadow-inner order-card">
+                                <div>
+                                    <p><strong>Pedido:</strong> Pedido entregado</p>
+                                    <p><strong>Descripción:</strong> Descripción del pedido</p>
+                                    <p><strong>Tiempo estimado:</strong> 10 min</p>
+                                    <p><strong>Estatus del producto:</strong> Entregado</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-accept">Marcar como entregado</button>
                                     <button class="btn btn-outline-primary">Ver Pedido</button>
                                 </div>
                             </div>
@@ -61,34 +123,38 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="orders-in-progress" role="tabpanel" aria-labelledby="orders-in-progress-tab">
+            <div class="tab-pane fade show active" id="order-history" role="tabpanel" aria-labelledby="order-history-tab">
                 <div class="row justify-content-center">
                     <div class="col-md-10">
                         <div class="list-group">
                             <div class="list-group-item d-flex justify-content-between align-items-center shadow-inner order-card">
                                 <div>
-                                    <p><strong>Pedido:</strong> Pedido 2</p>
-                                    <p><strong>Descripción:</strong> Descripción del pedido 2</p>
-                                    <p><strong>Tiempo estimado:</strong> 30 min</p>
+                                    <p><strong>Pedido:</strong> Pedido entregado</p>
+                                    <p><strong>Descripción:</strong> Descripción del pedido</p>
+                                    <p><strong>Tiempo estimado:</strong> 15 min</p>
+                                    <p><strong>Estatus del producto:</strong> Entregado</p>
                                 </div>
                                 <div>
                                     <button class="btn btn-outline-primary">Ver Pedido</button>
                                 </div>
                             </div>
-                            <!-- Agrega más pedidos aquí -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="order-history" role="tabpanel" aria-labelledby="order-history-tab">
-                <div class="row justify-content-center">
-                    <div class="col-md-10">
-                        <div class="list-group">
                             <div class="list-group-item d-flex justify-content-between align-items-center shadow-inner order-card">
                                 <div>
-                                    <p><strong>Pedido:</strong> Pedido 3</p>
-                                    <p><strong>Descripción:</strong> Descripción del pedido 3</p>
-                                    <p><strong>Tiempo estimado:</strong> 45 min</p>
+                                    <p><strong>Pedido:</strong> Pedido entregado</p>
+                                    <p><strong>Descripción:</strong> Descripción del pedido</p>
+                                    <p><strong>Tiempo estimado:</strong> 15 min</p>
+                                    <p><strong>Estatus del producto:</strong> Entregado</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-outline-primary">Ver Pedido</button>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center shadow-inner order-card">
+                                <div>
+                                    <p><strong>Pedido:</strong> Pedido entregado</p>
+                                    <p><strong>Descripción:</strong> Descripción del pedido</p>
+                                    <p><strong>Tiempo estimado:</strong> 15 min</p>
+                                    <p><strong>Estatus del producto:</strong> Entregado</p>
                                 </div>
                                 <div>
                                     <button class="btn btn-outline-primary">Ver Pedido</button>
@@ -107,3 +173,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
