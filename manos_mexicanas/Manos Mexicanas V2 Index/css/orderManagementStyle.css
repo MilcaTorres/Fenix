@@ -1,0 +1,74 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.order-card {
+    border: 2px solid #FFA500; /* Borde naranja claro */
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px; /* Espaciado entre elementos */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    transition: background-color 0.3s ease;
+}
+
+.order-card:hover {
+    background-color: #f8f9fa;
+}
+
+.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #FFFFFF;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.list-group-item p {
+    margin: 0;
+}
+
+.input-group-append .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-group-append .btn img {
+    height: 20px;
+}
+
+.nav-tabs .nav-link.active {
+    border-color: #dee2e6 #dee2e6 #f8f9fa;
+    background-color: #f8f9fa;
+}
