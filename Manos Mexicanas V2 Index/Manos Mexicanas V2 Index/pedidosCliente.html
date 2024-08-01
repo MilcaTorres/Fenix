@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Pedidos - Manos Mexicanas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/pedidoStyle.css">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand d-flex align-items-center" href="indexAdmin.html">
+            <img src="img/logo_Manos_Mexicanas-removebg-preview.png" alt="Manos Mexicanas" style="height: 50px;">
+            <span class="ml-2">Manos Mexicanas</span>
+        </a>
+    </div>
+    <a href="perfilUsuario.html" class="btn btn-link">&larr; Regresar</a>
+</div>
+    </nav>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="text-center flex-grow-1">Mis Pedidos</h2>
+            <div class="input-group" style="max-width: 300px;">
+                <input type="text" class="form-control" placeholder="Buscar Pedidos">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">
+                        <img src="img/search.png" alt="Buscar" style="height: 20px;">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <ul class="nav nav-tabs mb-4" id="orderTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="current-orders-tab" data-toggle="tab" href="#current-orders" role="tab" aria-controls="current-orders" aria-selected="true">Pedido actual</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="previous-orders-tab" data-toggle="tab" href="#previous-orders" role="tab" aria-controls="previous-orders" aria-selected="false">Pedidos anteriores</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="current-orders" role="tabpanel" aria-labelledby="current-orders-tab">
+                        <!-- Contenido de Pedido actual -->
+                        <div class="order-card d-flex justify-content-between align-items-center p-3 my-3 border rounded">
+                            <img src="img/pedido.png" alt="Order Icon" class="order-icon">
+                            <div class="order-details ml-3">
+                                <p class="order-status mb-1">Por pagar</p>
+                                <p class="order-time mb-1">15 min</p>
+                            </div>
+                            <a href="#" class="btn btn-link ml-auto">Ver Pedido</a>
+                        </div>
+                        <div class="order-card d-flex justify-content-between align-items-center p-3 my-3 border rounded">
+                            <img src="img/pedido.png" alt="Order Icon" class="order-icon">
+                            <div class="order-details ml-3">
+                                <p class="order-status mb-1">Por enviar</p>
+                                <p class="order-time mb-1">15 min</p>
+                            </div>
+                            <a href="#" class="btn btn-link ml-auto">Ver Pedido</a>
+                        </div>
+                        <div class="order-card d-flex justify-content-between align-items-center p-3 my-3 border rounded">
+                            <img src="img/pedido.png" alt="Order Icon" class="order-icon">
+                            <div class="order-details ml-3">
+                                <p class="order-status mb-1">Por recibir</p>
+                                <p class="order-time mb-1">15 min</p>
+                            </div>
+                            <a href="#" class="btn btn-link ml-auto">Ver Pedido</a>
+                        </div>
+                        <div class="order-card d-flex justify-content-between align-items-center p-3 my-3 border rounded">
+                            <img src="img/pedido.png" alt="Order Icon" class="order-icon">
+                            <div class="order-details ml-3">
+                                <p class="order-status mb-1">En aprobación</p>
+                                <p class="order-time mb-1">15 min</p>
+                            </div>
+                            <a href="#" class="btn btn-link ml-auto">Ver Pedido</a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="previous-orders" role="tabpanel" aria-labelledby="previous-orders-tab">
+                        <!-- Contenido de Pedidos anteriores -->
+                        <div class="order-card d-flex justify-content-between align-items-center p-3 my-3 border rounded">
+                            <img src="img/pedido.png" alt="Order Icon" class="order-icon">
+                            <div class="order-details ml-3">
+                                <p class="order-status mb-1">Pedido entregado</p>
+                                <p class="order-time mb-1">15 min</p>
+                            </div>
+                            <div class="ml-auto text-right">
+                                <a href="#" class="btn btn-link ml-auto">Ver Pedido</a>
+                                <a href="#" class="btn btn-link">Comentar</a>
+                            </div>
+                        </div>
+                        <div class="order-card d-flex justify-content-between align-items-center p-3 my-3 border rounded">
+                            <img src="img/pedido.png" alt="Order Icon" class="order-icon">
+                            <div class="order-details ml-3">
+                                <p class="order-status mb-1">Pedido entregado</p>
+                                <p class="order-time mb-1">15 min</p>
+                            </div>
+                            <div class="ml-auto text-right">
+                                <a href="#" class="btn btn-link ml-auto">Ver Pedido</a>
+                                <a href="#" class="btn btn-link">Comentar</a>
+                            </div>
+                        </div>
+                        <div class="order-card d-flex justify-content-between align-items-center p-3 my-3 border rounded">
+                            <img src="img/pedido.png" alt="Order Icon" class="order-icon">
+                            <div class="order-details ml-3">
+                                <p class="order-status mb-1">Pedido entregado</p>
+                                <p class="order-time mb-1">15 min</p>
+                            </div>
+                            <div class="ml-auto text-right">
+                                <a href="#" class="btn btn-link ml-auto">Ver Pedido</a>
+                                <a href="#" class="btn btn-link">Comentar</a>
+                            </div>
+                        </div>
+                        <div class="order-card d-flex justify-content-between align-items-center p-3 my-3 border rounded">
+                            <img src="img/pedido.png" alt="Order Icon" class="order-icon">
+                            <div class="order-details ml-3">
+                                <p class="order-status mb-1">Pedido entregado</p>
+                                <p class="order-time mb-1">15 min</p>
+                            </div>
+                            <div class="ml-auto text-right">
+                                <a href="#" class="btn btn-link ml-auto">Ver Pedido</a>
+                                <a href="#" class="btn btn-link">Comentar</a>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

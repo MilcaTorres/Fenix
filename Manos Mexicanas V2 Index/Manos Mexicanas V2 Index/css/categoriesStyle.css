@@ -1,0 +1,49 @@
+body {
+    background-color: #f8f9fa;
+}
+.navbar {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand img {
+    height: 50px;
+}
+.container {
+    margin-top: 50px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header h2 {
+    flex-grow: 1;
+    text-align: center;
+}
+.input-group {
+    max-width: 300px;
+}
+.input-group button img {
+    height: 20px;
+}
+.nav-tabs .nav-link.active {
+    background-color: #1da0b8;
+    color: #fff;
+}
+.list-group-item {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+.btn-success:hover {
+    background-color: #218838;
+}
+.order-card {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
