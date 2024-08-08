@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambiar contraseña - Manos Mexicanas</title>
     <link rel="stylesheet" href="css/cambioStyle.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div class="container">
@@ -13,12 +15,12 @@
             <h1>Manos Mexicanas</h1>
         </div>
         <div class="back-link">
-            <a href="inicio.html">&larr; Regresar al inicio</a>
+            <a href="inicioSesion.html">&larr; Regresar al inicio</a>
         </div>
         <div class="content">
             <h2>Cambiar contraseña</h2>
             <p>Ingresa tu nueva contraseña</p>
-            <form action="cambiar_contrasena.php" method="POST">
+            <form id="cambiar-contrasena-form">
                 <div class="input-group">
                     <label for="new-password">Nueva contraseña</label>
                     <input type="password" id="new-password" name="new-password" required>
@@ -31,5 +33,34 @@
             </form>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        document.getElementById('cambiar-contrasena-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+
+            var newPassword = document.getElementById('new-password').value;
+            var repeatPassword = document.getElementById('repeat-password').value;
+
+            if (newPassword === repeatPassword) {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Tu contraseña ha sido cambiada',
+                    showConfirmButton: false,
+                    timer: 1500
+                }).then(() => {
+                    window.location.href = 'perfilUsuario.html'; // Redirige a la página de perfil del usuario
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Las contraseñas no coinciden!',
+                });
+            }
+        });
+    </script>
 </body>
 </html>

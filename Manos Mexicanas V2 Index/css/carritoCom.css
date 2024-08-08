@@ -52,3 +52,13 @@ body {
     background-color: #007bff;
     border-color: #007bff;
 }
+
+.btn-remove {
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+}
+
+.btn-remove:hover {
+    background-color: #c82333;
+}

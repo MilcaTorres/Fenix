@@ -6,6 +6,8 @@
     <title>Gestionar Productos - Manos Mexicanas</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/categoriesStyle.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body>
     <nav class="navbar navbar-light bg-light">
@@ -42,7 +44,7 @@
                                     <p><strong>Categoria:</strong> Nombre de Categoria </p>
                                 </div>
                                 <div>
-                                    <button class="btn btn-success btn-sm mr-2">Eliminar</button>
+                                    <button class="btn btn-danger btn-sm delete-category-button">Eliminar</button>
                                 </div>
                             </div>
                             <div class="list-group-item d-flex justify-content-between align-items-center shadow-inner order-card">
@@ -50,7 +52,7 @@
                                     <p><strong>Categoria:</strong> Nombre de Categoria </p>
                                 </div>
                                 <div>
-                                    <button class="btn btn-success btn-sm mr-2">Eliminar</button>
+                                    <button class="btn btn-danger btn-sm delete-category-button">Eliminar</button>
                                 </div>
                             </div>
                             <div class="list-group-item d-flex justify-content-between align-items-center shadow-inner order-card">
@@ -58,15 +60,44 @@
                                     <p><strong>Categoria:</strong> Nombre de Categoria </p>
                                 </div>
                                 <div>
-                                    <button class="btn btn-success btn-sm mr-2">Eliminar</button>
+                                    <button class="btn btn-danger btn-sm delete-category-button">Eliminar</button>
                                 </div>
                             </div>
-                            <!-- Agrega más pedidos aquí -->
+                            <!-- Agrega más categorías aquí -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        document.querySelectorAll('.delete-category-button').forEach(button => {
+            button.addEventListener('click', function() {
+                Swal.fire({
+                    title: "¿Estás seguro?",
+                    text: "¡No podrás revertir esto!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "¡Sí, elimínalo!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Aquí puedes agregar la lógica para eliminar la categoría.
+                        Swal.fire({
+                            title: "¡Eliminado!",
+                            text: "La categoría ha sido eliminada.",
+                            icon: "success"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
 </html>
-    

@@ -1,0 +1,36 @@
+.navbar {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand img {
+    height: 50px;
+}
+.container {
+    margin-top: 50px;
+    max-width: 600px;
+}
+.header {
+    margin-bottom: 30px;
+}
+h2 {
+    font-weight: bold;
+    color: #333;
+}
+.form-group label {
+    font-weight: bold;
+    color: #555;
+}
+.btn-primary {
+    background-color: #28a745;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #218838;
+}
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+}

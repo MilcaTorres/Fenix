@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Categoría - Manos Mexicanas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/registroCategoryStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand d-flex align-items-center" href="indexAdmin.html">
+            <img src="img/logo_Manos_Mexicanas-removebg-preview.png" alt="Manos Mexicanas">
+            <span class="ml-2">Manos Mexicanas</span>
+        </a>
+    </nav>
+    <div class="container">
+        <div class="header text-center">
+            <h2>Registrar Categoría</h2>
+        </div>
+        <form id="registerCategoryForm">
+            <div class="form-group">
+                <label for="categoryName">Nombre</label>
+                <input type="text" class="form-control" id="categoryName" placeholder="Nombre de la Categoría" required>
+            </div>
+            <div class="d-flex justify-content-between mt-4">
+                <button type="button" id="registerCategoryButton" class="btn btn-primary">Registrar Categoría</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/registerCategoryScript.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

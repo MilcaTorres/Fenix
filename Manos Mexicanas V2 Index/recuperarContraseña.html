@@ -7,6 +7,8 @@
     <title>Recuperación de Contraseña</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/contraStyle.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -20,10 +22,10 @@
         <div class="form-container">
             <h2>¿Olvidaste la contraseña?</h2>
             <p>Ingresa tu correo electrónico asociado a tu cuenta y te enviaremos un código de verificación para cambiar tu contraseña</p>
-            <form>
+            <form id="recuperar-form">
                 <div class="form-group">
                     <label for="email">Correo electrónico</label>
-                    <input type="email" class="form-control" id="email" placeholder="Correo electrónico">
+                    <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
                 </div>
                 <button type="submit" class="btn">Enviar código</button>
             </form>
@@ -33,7 +35,22 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        document.getElementById('recuperar-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            
+            Swal.fire({
+                title: '¡Código enviado!',
+                text: 'Revisa tu correo electrónico.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'codigoVerificacion.html'; // Redirige a la página de verificación
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
-

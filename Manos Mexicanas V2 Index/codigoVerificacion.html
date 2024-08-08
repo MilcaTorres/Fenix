@@ -6,6 +6,7 @@
     <title>Recuperar Contraseña - Ingreso de Código</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/codigoStyle.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
     <nav class="navbar">
@@ -18,13 +19,12 @@
     <div class="container">
         <div class="form-container">
             <h2>Ingresa el código que recibiste</h2>
-            <p>correousuario@gmail.com</p>
-            <form>
+            <form id="codigo-form">
                 <div class="form-group code-inputs">
-                    <input type="text" class="form-control" maxlength="1">
-                    <input type="text" class="form-control" maxlength="1">
-                    <input type="text" class="form-control" maxlength="1">
-                    <input type="text" class="form-control" maxlength="1">
+                    <input type="text" class="form-control" maxlength="1" required>
+                    <input type="text" class="form-control" maxlength="1" required>
+                    <input type="text" class="form-control" maxlength="1" required>
+                    <input type="text" class="form-control" maxlength="1" required>
                 </div>
                 <a href="recuperarContraseña.html" class="resend-code">Reenviar código</a>
                 <button type="submit" class="btn">Siguiente</button>
@@ -35,5 +35,12 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        document.getElementById('codigo-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            window.location.href = 'cambiarContraseña.html'; // Redirige a la página de cambio de contraseña
+        });
+    </script>
 </body>
 </html>
