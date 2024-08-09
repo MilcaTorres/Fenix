@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/orderManagementStyle.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body>
     <nav class="navbar navbar-light bg-light">
@@ -50,8 +51,8 @@
                                     <p><strong>Estatus del producto:</strong> En espera</p>
                                 </div>
                                 <div>
-                                    <button class="btn btn-success btn-sm mr-2">Aceptar</button>
-                                    <button class="btn btn-danger btn-sm">Rechazar</button>
+                                    <button class="btn btn-success btn-sm mr-2 btn-accept">Aceptar</button>
+                                    <button class="btn btn-danger btn-sm btn-reject">Rechazar</button>
                                     <a href="infoPedido.html" class="btn btn-outline-primary">Ver Pedido</a>
                                 </div>
                             </div>
@@ -80,7 +81,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade show active" id="orders-in-progress" role="tabpanel" aria-labelledby="orders-in-progress-tab">
+            <div class="tab-pane fade" id="orders-in-progress" role="tabpanel" aria-labelledby="orders-in-progress-tab">
                 <div class="row justify-content-center">
                     <div class="col-md-10">
                         <div class="list-group">
@@ -125,7 +126,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade show active" id="order-history" role="tabpanel" aria-labelledby="order-history-tab">
+            <div class="tab-pane fade" id="order-history" role="tabpanel" aria-labelledby="order-history-tab">
                 <div class="row justify-content-center">
                     <div class="col-md-10">
                         <div class="list-group">
@@ -174,6 +175,40 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script>
+        // Alertas con SweetAlert2
+        document.querySelectorAll('.btn-accept').forEach((button, index) => {
+            button.addEventListener('click', () => {
+                let message;
+                if (index === 0) {
+                    message = "Has aprobado el pedido.";
+                } else if (index === 1) {
+                    message = "Este pedido ha sido pagado.";
+                } else if (index === 2) {
+                    message = "Este pedido ya está en camino.";
+                } else if (index === 3) {
+                    message = "Este pedido ya fue entregado.";
+                }
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: message,
+                    showConfirmButton: false,
+                    timer: 2500
+                });
+            });
+        });
+
+        // Alerta de error
+        document.querySelectorAll('.btn-reject').forEach((button) => {
+            button.addEventListener('click', () => {
+                Swal.fire({
+                    icon: "error",
+                    title: "Lastima...",
+                    text: "El pedido ha sido denegado!",
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
